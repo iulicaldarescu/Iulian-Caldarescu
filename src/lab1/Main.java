@@ -1,72 +1,40 @@
 package lab1;
-
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
+import java.lang.*;
+import java.util.ArrayList;
 
 public class Main {
 
-public static void main(String[] args) {
-        //FizzBuzz
-//        for (int i = 1; i <= 100; i++){
-//            if(i % 3 == 0){
-//                System.out.print("Fizz, ");
-//            }else if(i % 5 == 0){
-//                System.out.print("Buzz, ");
-//            }else if(i % 7 == 0){
-//                System.out.print("Rizz, ");
-//            }else if(i % 11 == 0){
-//                System.out.print("Jazz, ");
-//            }else
-//                System.out.print(i + ", ");
-//        }
+    public static void main(String[] args) {
+       int m = 0;
 
-    //System.out.println(String.valueOf(x).length());
-    compute(15);
-
-    }
-
-    static String compute(int numar){
-        System.out.print(numar + " => ");
-        String str = "";
-        int rest;
-            if(numar % 3 == 0){
-                str = "Foo";
-            }else if(numar % 5 == 0){
-                str = "Bar";
-            }else if(numar % 7 == 0){
-                str = "Qix";
-            }else{
-                str = ("" + numar);
+        ArrayList<Integer> lista = new ArrayList<>();
+        lista.add(1);
+        lista.add(1);
+        lista.add(0);
+        lista.add(-1);
+        lista.add(-1);
+        System.out.print(lista);
+        for(int i = 0; i < lista.size(); i++) {
+            for (int j = 0; j < lista.size(); j++) {
+                    if(lista.get(i) + lista.get(j) == 0){
+                        lista.remove(i);
+                        lista.remove(j);
+                        m++;
+                    }
+                }
             }
-
-        while(numar > 0){
-            rest = numar % 10;
-            if (rest == 3){
-                str = str.concat("Foo");
-            }else if(rest == 5){
-                str = str.concat("Bar");
-            }else if(rest == 7){
-                str = str.concat("Qix");
-            }
-            numar = numar / 10;
+        System.out.println(" => " + m + " perechi");
         }
-        System.out.println(str);
-
-    return str;
-            }
-
 
     }
 
 
-//    while(numar > 0){
-//            rest = numar % 10;
-//            if (rest == 3){
-//            str = str.concat("FOO");
-//            }
-//            numar = numar / 10;
-//
-//            }
+
+
+
+
+
+
 
 
 
