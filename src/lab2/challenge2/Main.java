@@ -35,6 +35,7 @@ public class Main {
         Studio studio2 = new Studio("Disney", new Film[]{film3,film4,film5});
 
         Studio[] studioDatabase = new Studio[]{studio1,studio2};
+
         Actor[] actori = new Actor[]{actorFaraPremii01,actorFaraPremii02,actorFaraPremii03,
         actorOscar1990,actorOscar2010,actorOscar2018};
         Film[] filme = new Film[]{film1,film2,film3,film4,film5};
@@ -42,23 +43,17 @@ public class Main {
 
         getStudioNames(studioDatabase);
         StudioNameByActor(studioDatabase);
-        ageAbove50(filme, actori);
-
-
-
+        ageAbove50(filme);
 
     }
 
-    private static void getStudioNames(Studio[] db){
-
-
+    public static void getStudioNames(Studio[] db){
         for(int i = 0; i < db.length; i++){
-            if(db[i].getFilme().length > 2){
+            if(db[i].getFilme().length >= 2){
                 System.out.println("Studio-ul cu filme mai mult de 2 este " +
                         db[i].getNume());
             }
-
-        }
+         }
     }
 
 
@@ -72,7 +67,7 @@ public class Main {
         }
     }
 
-    public static void ageAbove50(Film[] film, Actor[] act){
+    public static void ageAbove50(Film[] film){
         for(int i = 0; i < film.length; i++){
            for (int j = 0; j < film[i].getActori().length; j++){
                if(film[i].getActori()[j].getVarsta() > 50){

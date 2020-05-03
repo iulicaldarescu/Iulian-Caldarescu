@@ -4,6 +4,9 @@ abstract class Animal {
     protected int legs;
 
 
+    protected Animal(){
+
+    }
 
     protected Animal(int legs){
         this.legs = legs;
@@ -13,6 +16,6 @@ abstract class Animal {
     abstract void eat();
 
     void walk(int nrOfLegs){
-        System.out.println("Walks with the help of " + nrOfLegs + " legs");
+        System.out.println("I'm walking with the help of " + nrOfLegs + " legs");
     }
 }

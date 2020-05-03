@@ -1,9 +1,9 @@
 package lab2.challenge3;
 
-public class Fish extends Animal{
+public class Fish extends Animal implements Pet{
 
     protected Fish() {
-        super(0);
+
     }
 
 
@@ -14,5 +14,20 @@ public class Fish extends Animal{
     @Override
     void eat() {
         System.out.println("I love seafood");
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public String setName(String name) {
+        return null;
+    }
+
+    @Override
+    public void play() {
+
     }
 }
