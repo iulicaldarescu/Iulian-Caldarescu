@@ -40,9 +40,8 @@ public class Builder{
         return this;
     }
 
-
-
     public Person getPerson(){
+
         return new Person(name,job,university,drivingLicense,isMarried);
     }
 }
