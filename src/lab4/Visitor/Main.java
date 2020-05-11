@@ -12,12 +12,12 @@ public class Main {
         elements[1] = book2;
         elements[2] = video;
         elements[3] = audio;
-        Visitor visitor = new CostVisitor();
+        //Visitor visitor = new CostVisitor();
 
-        visitor.visit(elements);
+        //visitor.visit(elements);
 
-        System.out.println(((CostVisitor) visitor).getTotalCost());
+        //System.out.println(((CostVisitor) visitor).getTotalCost());
 
-
+        
     }
 }

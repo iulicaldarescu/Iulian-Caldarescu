@@ -1,6 +1,6 @@
 package lab4.Visitor;
 
-public class CostVisitor implements Visitor {
+public abstract class CostVisitor implements Visitor {
     private int totalCost;
 
     public int getTotalCost() {
